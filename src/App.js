@@ -94,7 +94,7 @@ const searchMovies = async () => {
     <AdamContext.Provider value={{ home, latest, classic, searched, data, options, searching, setSearching }}>
       <div className="bg-[#781F3B] flex justify-between items-center gap-4 w-full py-5 px-8">
         <Link onClick={() => {setSearched(false);setSearching(true)}} to="/">
-          <img src="%PUBLIC_URL%/logo.svg" alt="CinemaScore" className="h-8" />
+          <img src={process.env.PUBLIC_URL + 'logo.svg'} alt="CinemaScore" className="h-8" />
         </Link>
 
         { searching ? <AutoComplete
